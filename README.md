@@ -176,6 +176,7 @@ Banyak Kolom Duplikat: 0
 dtype: int64
 
 - **Preview data clean**
+  
 | hotel         | is_canceled | lead_time | arrival_date_year | arrival_date_month | arrival_date_week_number | arrival_date_day_of_month | stays_in_weekend_nights | stays_in_week_nights | adults | ... | agent   | company  | days_in_waiting_list | customer_type | adr        | required_car_parking_spaces | total_of_special_requests | reservation_status | reservation_status_date | month |
 |---------------|-------------|-----------|-------------------|---------------------|--------------------------|---------------------------|------------------------|----------------------|--------|-----|---------|----------|----------------------|---------------|------------|----------------------------|---------------------------|-------------------|--------------------------|-------|
 | Resort Hotel  | 0           | 342       | 2015              | July                | 27                       | 1                         | 0                      | 0                    | 2      | ... | 94.138  | 183.081  | 0                    | Transient     | 0.0        | 0                          | 0                         | Check-Out         | 2015-07-01               | 7     |
