@@ -57,7 +57,7 @@ df = read_csv('/content/drive/MyDrive/<your_dir>/hotels.csv')
   
 # Dataset Overview
 
-Dataset yang digunakan dalam project ini berasal dari [Hotel booking demand datasets](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang dipublish melaluii github [tidytuesday](https://github.com/dslc-io/tidytuesdayR). Dataset ini mendeskripsikan dua dataset dengan data demand hotel. Terdapat dua jenis hotel, yaitu Resort Hotel dan City Hotel. Kedua dataset memiliki struktur yang sama, dengan 31 variable dan merepresentasikan reservasi antara 1 juli 2015 hingga 31 Agustus 2017, termasuk reservasi yang dibatalkan ataupun yang berhasil.
+Dataset yang digunakan dalam project ini berasal dari [Hotel booking demand datasets](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang dipublish melaluii github [tidytuesday](https://github.com/dslc-io/tidytuesdayR). Dataset ini mendeskripsikan dua dataset dengan data demand hotel. Terdapat dua jenis hotel, yaitu Resort Hotel dan City Hotel. Kedua dataset memiliki struktur yang sama, dengan 31 variable dan merepresentasikan reservasi antara 1 Juli 2015 hingga 31 Agustus 2017, termasuk reservasi yang dibatalkan ataupun yang berhasil.
 
 Berikut adalah informasi umum pada dataframe:
 
@@ -183,6 +183,7 @@ Banyak Kolom Duplikat: 0
 dtype: int64
 
 - **Preview data clean**
+  
 | **Hotel**        | **Is Canceled** | **Lead Time** | **Arrival Year** | **Arrival Month** | **Week Number** | **Day of Month** | **Weekend Nights** | **Week Nights** | **Adults** | **Agent** | **Company** | **Days in Waiting List** | **Customer Type** | **ADR**  | **Car Parking Spaces** | **Special Requests** | **Reservation Status** | **Reservation Date** | **Month** |
 |-------------------|-----------------|---------------|------------------|-------------------|-----------------|------------------|--------------------|-----------------|------------|-----------|-------------|-------------------------|--------------------|---------|------------------------|----------------------|------------------------|----------------------|----------|
 | Resort Hotel      | 0               | 342           | 2015             | July              | 27              | 1                | 0                  | 0               | 2          | 94.138     | 183.081     | 0                       | Transient          | 0.0     | 0                      | 0                    | Check-Out             | 2015-07-01          | 7        |
@@ -201,11 +202,12 @@ dtype: int64
 
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Distribusi_Tipe_Customer.png?raw=true)
 
-Dari hasil visualisasi diatas, kita dapat melihat bahwa 75% dari total customer adalah tipe transient dan yang paling sedikit adalah tipe customer group
+Dari hasil visualisasi diatas, kita dapat melihat bahwa 75% dari total customer adalah tipe transient dan yang paling sedikit adalah tipe customer group. Transient adalah tipe pelanggan yang melakukan reservasi jangka pendek tanpa keterikatan kontrak atau grup tertentu. Mereka biasanya bepergian untuk keperluan pribadi, bisnis singkat, atau liburan mendadak. Peningkatan budaya kerja hybrid, travelling independen, dan adanya platform pemesanan online membuat tipe transient menjadi lebih dominan dibandingkan grup atau kontrak. Selain itu, mengingat Portugal adalah negara yang relatif kecil, pengunjung manca negara dapat dengan mudah datang untuk perjalanan wisata jangka pendek.
 
-- **Analisis 2: Status Reservasi Pada Masing - Masing Hotel**
+- **Analisis 2: Status Reservasi Pada Masing-masing Hotel**
 
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Status_Reservasi_Perhotel.png?raw=true)
+
 Dari hasil visualisasi kedua hotel tersebut, jumlah pembatalan tertinggi berada pada city hotel namun untuk reservasi yang terbanyak juga berada di City hotel. Dari informasi ini, kita dapat menganalisa dari tipe hotel manakah yang berkontribusi terhadap pendapatan hotel. Apakah city hotel karena tingginya jumlah reservasi? Atau malah resort hotel yang memiliki total pendapatan lebih banyak? Nanti, kita akan menganalisa pendapatan hotel di akhir.
 
 Selanjutnya, kita akan menganalisa customer yang melakukan reservasi ulang
@@ -213,6 +215,7 @@ Selanjutnya, kita akan menganalisa customer yang melakukan reservasi ulang
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Jumlah_Customer_Reservasi_Ulang.png?raw=true)
 
 Ternyata hanya 3.19% dari total customer 119.390 yang melakukan reservasi ulang :0  Mari kita lihat lebih detail banyaknya customer yang membatalkan reservasi setiap bulannya pada masing-masing tahun
+
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Status_Reservasi_Pertahun_Tiap_Hotel.png?raw=true)
 
 - Tahun 2014: Jumlah reservasi secara keseluruhan masih relatif rendah dibandingkan tahun-tahun berikutnya. Terdapat fluktuasi yang cukup signifikan dari bulan ke bulan, namun tidak ada tren yang sangat jelas.
@@ -223,6 +226,7 @@ Ternyata hanya 3.19% dari total customer 119.390 yang melakukan reservasi ulang 
 Berdasarkan grafik di atas, kita dapat melihat fluktuasi yang cukup signifikan pada jumlah reservasi yang berhasil dan dibatalkan setiap bulannya. Terlihat bahwa bulan Juli mengalami puncak tertinggi pada jumlah reservasi yang berhasil, sementara bulan Januari mencatatkan jumlah reservasi yang berhasil paling rendah. Tren pembatalan reservasi juga menunjukkan pola yang menarik, dengan puncak pembatalan terjadi pada bulan-bulan tertentu. Fluktuasi ini kemungkinan besar dipengaruhi oleh berbagai faktor, seperti musim liburan, event khusus, atau bahkan perubahan kebijakan perusahaan. Secara keseluruhan, grafik ini memberikan gambaran yang jelas tentang kinerja reservasi sepanjang tahun dan dapat menjadi dasar untuk melakukan analisis lebih lanjut yaitu dengan membandingkan data ini dengan data tahun sebelumnya.
 
 - **Analisis 3: Pendapatan Pertahun dari Kedua Tipe Hotel**
+  
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Jumlah_Customer_Pertahun.png?raw=true)
 Pendapatan resort hotel selama tiga tahun berturut - turut lebih tinggi daripada city hotel dengan puncak tertingginya pada tahun 2016. Untuk mengetahui lebih lanjut, kita akan menganalisa tipe customer manakah yang paling banyak memberikan kontribusi terhadap pendapatan hotel. Supaya lebih rinci, kita akan melakukan analisa pada resort hotel terlebih dahulu.
 
@@ -236,6 +240,22 @@ Selain melakukan analisa pada resort hotel, kita akan melakukan analisa pada cit
 
 Berdasarkan analisis dari keempat grafik pada city hotel, dapat diidentifikasi beberapa pola signifikan dalam pengelolaan hotel. Grafik pertama menunjukkan bahwa segmen Transient memiliki ADR tertinggi dibandingkan segmen lainnya, mengindikasikan kontribusi pendapatan yang lebih substansial dari tamu individual. Analisis hubungan antara lead time dengan ADR pada grafik kedua menunjukkan distribusi yang relatif stabil, meskipun terdapat beberapa outlier yang mencapai ADR 250, menandakan adanya kasus-kasus khusus dalam penetapan harga. Selanjutnya, grafik ketiga memperlihatkan korelasi positif antara jumlah special request dengan ADR, dimana peningkatan jumlah permintaan khusus berbanding lurus dengan tingkat ADR - hal ini mengindikasikan hubungan antara ekspektasi layanan dengan kesediaan membayar dari tamu. Pada grafik terakhir, terlihat pola seasonal yang jelas dimana ADR mencapai puncaknya pada periode Mei hingga September, dengan segmen Transient secara konsisten mempertahankan posisi ADR tertinggi di hampir setiap bulan, memberikan implikasi penting untuk strategi penetapan harga dan manajemen pendapatan hotel.
 
+- **Analisis 4: Hubungan Average Daily Rate (ADR) dengan Jumlah Pembatalan Reservasi**
+
+![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/ADR_Month.png?raw=true)
+
+![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Banyaknya_Pembatalan_Perbulan.png?raw=true)
+
+Dari kedua grafik tersebut, dapat diketahui bahwa pembatalan ini sering terjadi saat harga/rate hotel sedang meninggi. Sebaliknya, harga yang rendah membuat reservasi lebih terjangkai, sehingga kecil kemungkinan pelanggan untuk membatalkan reservasi.
+
+- **Analisis 5: Top 10 Negara dengan Jumlah Pengunjung dan Pembatalan Tertinggi**
+  
+![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara.png)
+
+![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara.png)
+
+Dari grafik tersebut diketahui bahwa, negara dengan jumlah pengunjung dan pembatalan tertinggi adalah Portugal, dimana hotel ini juga terletak di wilayah Portugal. Hal ini mungkin terjadi karena dengan Portugal merupakan merupakan negara idel untuk liburan akhir pekan atau perjalanan jangka pendek. Beberapa destinasi wisata di Portugal dapat dijangkau dalam waktu singkat sehingga pengunjung domestik dengan mudah mengakses wisata ini. Di sisi lain, pembatalan mungkin terjadi karena pengunjung domestik yang tinggal di negara yang sama (Portugal) merasa lebih nyaman untuk membatalkan reservasi karena aksesibilitas yang lebih tinggi ke hotel-hotal lokal, dibanding pengunjung internasional yang jauh lebih terikat dengan keputusan tersebut.
+  
 # Kesimpulan
 lorem ipsum
 
