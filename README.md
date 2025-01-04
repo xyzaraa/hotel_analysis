@@ -61,7 +61,7 @@ df = read_csv('/content/drive/MyDrive/<your_dir>/hotels.csv')
   
 # Dataset Overview
 
-Dataset yang digunakan dalam project ini berasal dari [Hotel booking demand datasets](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang dipublish melaluii github [tidytuesday](https://github.com/dslc-io/tidytuesdayR). Dataset ini mendeskripsikan dua dataset dengan data demand hotel. Terdapat dua jenis hotel, yaitu Resort Hotel dan City Hotel. Kedua dataset memiliki struktur yang sama, dengan 31 variable dan merepresentasikan reservasi antara 1 Juli 2015 hingga 31 Agustus 2017, termasuk reservasi yang dibatalkan ataupun yang berhasil.
+Dataset yang digunakan dalam project ini berasal dari [Hotel booking demand datasets](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang dipublish melalui github [tidytuesday](https://github.com/dslc-io/tidytuesdayR). Dataset ini mendeskripsikan dua dataset dengan data demand hotel. Terdapat dua jenis hotel, yaitu Resort Hotel dan City Hotel. Kedua dataset memiliki struktur yang sama, dengan 31 variable dan merepresentasikan reservasi antara 1 Juli 2015 hingga 31 Agustus 2017, termasuk reservasi yang dibatalkan ataupun yang berhasil.
 
 Berikut adalah informasi umum pada dataframe:
 
@@ -232,6 +232,7 @@ Berdasarkan grafik di atas, kita dapat melihat fluktuasi yang cukup signifikan p
 - **Analisis 3: Pendapatan Pertahun dari Kedua Tipe Hotel**
   
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Jumlah_Customer_Pertahun.png?raw=true)
+
 Pendapatan resort hotel selama tiga tahun berturut - turut lebih tinggi daripada city hotel dengan puncak tertingginya pada tahun 2016. Untuk mengetahui lebih lanjut, kita akan menganalisa tipe customer manakah yang paling banyak memberikan kontribusi terhadap pendapatan hotel. Supaya lebih rinci, kita akan melakukan analisa pada resort hotel terlebih dahulu.
 
 ![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Resort%20Hotel%20ADR%20Relation.png?raw=true)
