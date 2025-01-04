@@ -200,8 +200,6 @@ dtype: int64
 *Data preview ini adalah subset dari dataset yang telah dibersihkan, dengan 33 kolom dan 5 baris pertama yang ditampilkan.*
 
 
-
-
 # Explanatory Data Analysis
 
 - **Analisis 1: Distribusi Tipe Customer**
@@ -256,13 +254,20 @@ Berdasarkan analisis dari keempat grafik pada city hotel, dapat diidentifikasi b
 Dari kedua grafik tersebut, dapat diketahui bahwa pembatalan ini sering terjadi saat harga/rate hotel sedang meninggi. Sebaliknya, harga yang rendah membuat reservasi lebih terjangkau, sehingga kecil kemungkinan pelanggan untuk membatalkan reservasi.
 
 - **Analisis 5: Top 10 Negara dengan Jumlah Pengunjung dan Pembatalan Tertinggi**
-Origin Country             |  Cancellation by Country
-:-------------------------:|:-------------------------:
-![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara.png?raw=true)  |  ![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara_Cancelation.png?raw=true)
-  
+
+| **Hubungan Average Daily Rate (ADR) dengan Jumlah Pembatalan Reservasi**|
+|-------------------------|
+| ![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara.png?raw=true)|
+| ![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara_Cancelation.png?raw=true)  |
 
 
 Dari grafik tersebut diketahui bahwa, negara dengan jumlah pengunjung dan pembatalan tertinggi adalah Portugal, dimana hotel ini juga terletak di wilayah Portugal. Hal ini mungkin terjadi karena dengan Portugal merupakan merupakan negara idel untuk liburan akhir pekan atau perjalanan jangka pendek. Beberapa destinasi wisata di Portugal dapat dijangkau dalam waktu singkat sehingga pengunjung domestik dengan mudah mengakses wisata ini. Di sisi lain, pembatalan mungkin terjadi karena pengunjung domestik yang tinggal di negara yang sama (Portugal) merasa lebih nyaman untuk membatalkan reservasi karena aksesibilitas yang lebih tinggi ke hotel-hotal lokal, dibanding pengunjung internasional yang jauh lebih terikat dengan keputusan tersebut.
+
+- **Data Modelling**
+![image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Model%20Comparison.png?raw=true)
+
+Analisis model machine learning untuk memprediksi pembatalan reservasi hotel menunjukkan bahwa model CatBoost memiliki performa terbaik dengan akurasi tertinggi dibandingkan dengan XGBoost dan KNN. Hal ini menunjukkan bahwa CatBoost lebih mampu mempelajari pola kompleks dalam data dan menghasilkan prediksi yang lebih akurat. Meskipun demikian, ketiga model menunjukkan performa yang baik dalam mengklasifikasikan status reservasi, yang mengindikasikan bahwa fitur-fitur yang dipilih dan pra-pemrosesan data yang dilakukan cukup efektif. Hasil analisis ini dapat digunakan untuk membangun sistem prediksi yang handal dan membantu hotel dalam mengoptimalkan strategi pengelolaan reservasi untuk mengurangi tingkat pembatalan.
+  
   
 # Kesimpulan
 Analisis menunjukkan bahwa tingkat pembatalan reservasi cukup tinggi, terutama pada City Hotel dan customer Transient, dengan pola musiman yang terlihat pada bulan-bulan tertentu. Faktor-faktor seperti special request, keberadaan anak-anak, dan lead time berkorelasi positif dengan Average Daily Rate (ADR), yang juga bervariasi berdasarkan tipe hotel dan musim. Resort Hotel umumnya memiliki ADR yang lebih tinggi, terutama pada akhir pekan dan musim liburan. 
