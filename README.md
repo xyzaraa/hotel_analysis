@@ -8,18 +8,23 @@ Tujuan utama dari project ini adalah memberikan wawasan untuk pengambilan keputu
 
 ## Langkah Analisa
 1. Data Cleaning
+
 Missing value akan dibersihkan, memastikan format sudah sesuai (date, categorical, dan numerical), serta memfilter data berdasarkan reservasi yang tidak dibatalkan(is_canceled == 0).
 
 2. Explanatory Data Analysis
+
 Data yang sudah bersih akan dikelompokkan berdasarkan bulan, tahun, tipe hotel dan lain-lain untuk memahami pola pendapatan.
 
 3. Visualisasi
+
 Relasi antar data akan divisualisasikan untuk memberikan pemahaman yang advanced. Hal ini akan menghasilkan pandangan yang lebih luas kepada pihak terkait agar lebih mudah mengambil keputusan.
 
 4. Analisis Tren
+
 Identifikasi saat dimana jumlah reservasi meningkat atau merendah untuk masing-masing tipe hotel, serta evaluasi kemungkinan faktor penyebab (misalnya musim liburan atau perbedaan target konsumen).
 
 5. Model Prediction
+
 Setelah proses data cleaning dan analisis selesai, data akan digunakan untuk membangun dan membandingkan model prediksi menggunakan algoritma XGBoost, CatBoost, dan K-Nearest Neighbors (KNN). Model XGBoost dan CatBoost dipilih karena performanya yang kuat dalam menangani dataset yang kompleks dan besar, sedangkan KNN digunakan sebagai model pembanding yang sederhana namun efektif untuk analisis data kecil atau pola lokal.
 
 ## Manfaat dan Implikasi dari Analisis
@@ -107,6 +112,7 @@ memory usage: 29.1+ MB
 Sebelum dianalisis, data mentah akan melalui data cleaning terlebih dahulu. Proses ini meliputi mengimpor data, menghilangkan duplikasi pada data, memeriksa missing value, dan menangani missing value dengan rata-rata dari kolom tersebut.
 
 - **Before Data Cleaning**
+  
 Banyak Kolom Duplikat: 31994
 
 | Column                          | Missing Values |
@@ -147,6 +153,7 @@ Banyak Kolom Duplikat: 31994
 dtype: int64
 
 - **After Data Cleaning**
+  
 Banyak Kolom Duplikat: 0
 
 | Column                          | Missing Values |
@@ -287,3 +294,4 @@ Untuk menambah wawasan dari analisa hotel diatas, cek [storyboard](https://mediu
 # Author 👨‍💻 
 - [Alviya Laela Lestari (202110370311400)](https://github.com/alviyalaela)
 - [Kiara Azzahra (202110370311426)](https://github.com/xyzaraa)
+
