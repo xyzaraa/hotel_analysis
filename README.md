@@ -263,7 +263,7 @@ Dari kedua grafik tersebut, dapat diketahui bahwa pembatalan ini sering terjadi 
 
 - **Analisis 5: Top 10 Negara dengan Jumlah Pengunjung dan Pembatalan Tertinggi**
 
-| **Hubungan Average Daily Rate (ADR) dengan Jumlah Pembatalan Reservasi**|
+| **Hubungan Jumlah Pengunjung dengan Jumlah Pembatalan Reservasi**|
 |-------------------------|
 | ![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara.png?raw=true)|
 | ![](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Top10_Negara_Cancelation.png?raw=true)  |
@@ -294,4 +294,5 @@ Untuk menambah wawasan dari analisa hotel diatas, cek [storyboard](https://mediu
 # Author 👨‍💻 
 - [Alviya Laela Lestari (202110370311400)](https://github.com/alviyalaela)
 - [Kiara Azzahra (202110370311426)](https://github.com/xyzaraa)
+
 
